@@ -12,6 +12,7 @@ exports.addUser = async (req, res) => {
 };
 
 exports.login = async (req, res) => {
+    console.log(req.body);
     try {
         const user = User.findByCredentials(req.body.email, req.body.password);
         res.status(200).send(user);
