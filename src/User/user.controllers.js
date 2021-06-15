@@ -1,6 +1,7 @@
 const { User } = require('./user.model');
 
 exports.addUser = async (req, res) => {
+    console.log(req.body);
     try {
         const user = new User(req.body)
         const savedUser = await user.save();
